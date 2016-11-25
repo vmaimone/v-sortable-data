@@ -1,4 +1,4 @@
-const { doSort, syncIcons, syncDatasets, init } = require('./functions')
+const fn = require('./functions')
 module.exports = module.exports.default = ({
   bind(tr, binding, vnode) {
     let { sortColumn, defaultSort, sortDirection } = tr.dataset
@@ -10,11 +10,11 @@ module.exports = module.exports.default = ({
     })
 
     for(let th of tr.children) {
-      init(th)
+      fn.init(th)
         .addEventListener('click', () => {
-          syncDatasets(th)
-          syncIcons(th)
-          vnode.context[binding.expression] = doSort(th.parentNode, vnode.context[binding.expression])
+          fn.syncDatasets(th)
+          fn.syncIcons(th)
+          vnode.context[binding.expression] = fn.doSort(th.parentNode, vnode.context[binding.expression])
           let { sortDirection: direction, sortColumn: column } = th.parentNode.dataset
           vnode.context.$emit('table-sorted', { column, direction })
 
