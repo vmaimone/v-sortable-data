@@ -41,7 +41,7 @@ function syncDatasets(th) {
 function init(th) {
   th.style.cursor = 'pointer'
   th.classList.add('is-unselectable')
-  exports.syncDatasets(th)
+  syncDatasets(th)
   return th
 }
 function createSortIconElement() {
@@ -60,7 +60,7 @@ function syncIcons(el) {
     if (col.dataset.column === dataset.sortColumn) {
       col.classList.add(sortedColumnClass)
       if (!col.querySelector(sortedIconClass)) {
-        col.prepend(exports.createSortIconElement())
+        col.prepend(createSortIconElement())
       }
     }
     else {
