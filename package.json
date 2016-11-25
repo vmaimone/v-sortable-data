@@ -1,6 +1,6 @@
 {
   "name": "v-sortable-data",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "a directive for sorting tables using data attributes",
   "main": "index.js",
   "scripts": {
