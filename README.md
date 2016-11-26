@@ -1,6 +1,8 @@
 # v-sortable-data
 a vue directive for sorting tables using data attributes
 
+Demo: [https://vmaimone.github.io/v-sortable-data](https://vmaimone.github.io/v-sortable-data)
+
 # example
 
 ### js
