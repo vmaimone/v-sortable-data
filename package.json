@@ -1,8 +1,8 @@
 {
   "name": "v-sortable-data",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a vue directive for sorting tables using data attributes",
-  "main": "index.js",
+  "main": "dist/v-sortable-data.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
