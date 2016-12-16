@@ -24,6 +24,11 @@
     }
   })
 
+  directive.install = function (Vue, options) {
+    options = options || { name: 'sortable' }
+    Vue.directive(options.name, directive)
+  }
+  
   if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
     module.exports = directive
   } else {
